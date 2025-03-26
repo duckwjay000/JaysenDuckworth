@@ -371,6 +371,21 @@ var main = (function($) { var _ = {
 					}
 
 			});
+		
+			document.addEventListener("DOMContentLoaded", function () {
+			    document.querySelectorAll(".social-icon").forEach(icon => {
+			        icon.addEventListener("click", function (event) {
+			            event.preventDefault(); // Prevent default anchor behavior
+			            const url = this.getAttribute("data-url");
+			            if (url.startsWith("mailto:")) {
+			                window.location.href = url; // Open mail client for email
+			            } else {
+			                window.open(url, "_blank"); // Open social media links in a new tab
+			            }
+			        });
+			    });
+			});
+
 
 	},
 
