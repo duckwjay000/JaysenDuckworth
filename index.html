@@ -69,15 +69,21 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form method="POST" action="https://api.web3forms.com/submit">
+									
+									<input type="hidden" name="access_key" value="0ec7d821-8ab1-4666-9c92-e994cfe90038" />
+
+									<input type="hidden" name="subject" value="New Contact Form Submission from my website" />
+    								<input type="hidden" name="from_name" value="My Website" />
+
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" placeholder="Your Name"/>
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="text" name="email" id="email" placeholder="Your Email"/>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
